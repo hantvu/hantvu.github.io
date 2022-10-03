@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+		<title>Vietnamese Immigrants in the U.S.</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" / >
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+		<!-- THESE ARE THE CSS FILES I ADDED -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Domine:400,700"/>
+
+        <!-- THESE ARE THE JAVASCRIPT FILES I ADDED -->
+
+		<script type="text/javascript" src="http://www.columbiamissourian.com/app/projects/Project_files/js/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="http://www.columbiamissourian.com/app/projects/Project_files/js/jquery-ui-1.10.2.custom.js"></script>
+		<script type="text/javascript" src="http://www.columbiamissourian.com/app/projects/Project_files/js/jquery.ui.tooltip.js"></script>
+		<script type="text/javascript" src="http://www.columbiamissourian.com/app/projects/Project_files/js/jquery.cycle.all.js"></script>
+
+
+		<!-- THE CSS STYLES START HERE -->
+		<style>
+			/*! jQuery UI - v1.10.2 - 2013-03-17
+			* http://jqueryui.com
+			* Includes: jquery.ui.core.css, jquery.ui.resizable.css, jquery.ui.selectable.css, jquery.ui.accordion.css, jquery.ui.autocomplete.css, jquery.ui.button.css, jquery.ui.datepicker.css, jquery.ui.dialog.css, jquery.ui.menu.css, jquery.ui.progressbar.css, jquery.ui.slider.css, jquery.ui.spinner.css, jquery.ui.tabs.css, jquery.ui.tooltip.css
+			* Copyright 2013 jQuery Foundation and other contributors Licensed MIT */
+
+			h1 {
+				font-size: 3em;
+			    line-height: 1.4em;
+			}
+
+			p.body, a {
+				color: black;
+			    font-size: 16px;
+			    line-height: 27px;
+			    margin-bottom: 24px;
+			}
+
+			.domine, h3 {
+				 font-family:  'Domine', serif;
+			}
+
+			.base {
+				background-attachment: fixed;
+				height: 400px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.clear {clear: both;}
+
+			/* INTRO SECTION */
+
+			.coveropener {
+				position: relative;
+				background-repeat: no-repeat;
+  			background-position: center;
+				background-size: cover;
+  			height: 100vh;
+			}
+
+			.centered {
+				  margin: 0;
+				  position: absolute;
+				  top: 50%;
+				  left: 50%;
+				  -ms-transform: translate(-50%, -50%);
+				  transform: translate(-50%, -50%);
+				max-width: 684px;
+				max-height: 400px;
+				width: 90%;
+				height: 90%;
+			    text-align: center;
+			    font-family: inerit;
+			    line-height: 1.5em;
+			    padding: 5%;
+			}
+
+			.move {
+			  opacity: 0;
+			  transform: translate(0, 10vh);
+			  transition: all 3s;
+			}
+
+			.move.visible {
+			  opacity: 1;
+			  transform: translate(0, 0);
+			}
+
+
+			.start.fade-in {
+			animation: fadeIn ease 2s;
+			-webkit-animation: fadeIn ease 2s;
+			-moz-animation: fadeIn ease 2s;
+			-o-animation: fadeIn ease 2s;
+			-ms-animation: fadeIn ease 2s;
+			}
+			@keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+			}
+
+			@-moz-keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+			}
+
+			@-webkit-keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+			}
+
+			@-o-keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+			}
+
+			@-ms-keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+			}
+
+			.start.fade-out {
+			animation: fadeOut ease 3s forwards;
+			-webkit-animation: fadeOut ease 3s forwards;
+			-moz-animation: fadeOut ease 3s forwards;
+			-o-animation: fadeOut ease 3s forwards;
+			-ms-animation: fadeOut ease 3s forwards;
+			}
+			@keyframes fadeOut {
+			0% {opacity:1;}
+			100% {opacity:0;}
+
+			}
+
+			@-moz-keyframes fadeOut {
+			0% {opacity:1;}
+			100% {opacity:0;}
+			}
+
+			@-webkit-keyframes fadeOut {
+			0% {opacity:1;}
+			100% {opacity:0;}
+			}
+
+			@-o-keyframes fadeOut {
+			0% {opacity:1;}
+			100% {opacity:0;}
+			}
+
+			@-ms-keyframes fadeOut {
+			0% {opacity:1;}
+			100% {opacity:0;}
+			}
+
+			/* ALL ABOUT THE GRAPHIC DIV */
+			.graphic{
+				width: 100%;
+			    max-width: 630px;
+			    height: auto;
+			    margin: 0 auto 0 auto ;
+			}
+			.graphicmedium{
+			    max-width: 960px;
+			    width: 100%;
+			    height: auto;
+			    margin: 0 auto 0 auto ;
+			}
+			.graphicwide{
+			    max-width: 1200px;
+			    width: 100%;
+			    height: auto;
+			    margin: 0 auto 0 auto ;
+			}
+
+			.graphic h4, .graphicwide h4, .graphicmedium h4  {
+			    padding: 0;
+			    margin: 50px 0 4px 0;
+			    font-family:  'Domine', serif;
+			    font-weight: bold;
+			    font-size: 1.5em;
+			    line-height: 1.5em;
+			    z-index: 2000;
+			    }
+
+			.graphic p, p {
+			    width: 100%;
+			    padding: 5px 0;
+			    margin: 0 0 8px 0;
+			    font-family:  'Domine', serif;
+			    font-size: 1em;
+			    line-height: 1.5em;
+			    z-index: 2000;
+			    }
+
+			.graphic img, .graphicmedium img, .graphicwide img{
+			    width: 100%;
+			    height: auto;
+			    z-index: 1000;
+			    }
+
+			.graphic div{
+			    /*width: 100%;*/
+			    height: auto;
+			    z-index: 1000;
+			}
+
+			.graphicwide video{
+					width: 100% !important;
+					margin: auto;
+			}
+
+
+			/*Tableau style */
+			.tableauPlaceholder iframe {
+				margin: auto !important;
+			}
+
+			/* 1-2-3 PANEL STYLES */
+
+			.tab-nav a {
+			    background: none repeat scroll 0 0 white;
+			    border: 1px solid black;
+			    color: black;
+			    display: inline-block;
+			    font-size: 12px;
+			    font-weight: bold;
+			    margin: 0 4px 0 0;
+			    border-radius: 100%;
+			    padding: 4px 4px;
+			    width: 14px;
+			    text-align: center;
+			    text-decoration: none;
+			    font-family: sans-serif;
+			    line-height: 14px;
+			}
+
+			#next_panel {
+				width: 70px;
+				border-radius: 15px;
+			}
+
+			.tab-nav a.activeSlide {
+			    background: none repeat scroll 0 0 white;
+			    color: black;
+			}
+
+			.tab-nav {
+			    width: auto !important;
+			    float: left;
+			    margin: 10px 10px 0 0;
+			    height: 44px;
+			}
+
+			.tab-wrapper {
+			    margin: 0 auto -1px auto;
+			    height: 20px;
+			}
+
+			#panel_graphic {
+			    margin: 10px 0 0 0;
+			    position: relative;
+			    width: 100% !important;
+			}
+
+
+
+			.panel {
+			    position: relative;
+			    display: block;
+			    left: 0;
+			    opacity: 1;
+			    padding: 10px;
+			    z-index: 4;
+			    background-color: white;
+					width: 100%;
+			}
+
+			.title{
+				font-family: 'Open Sans', sans-serif;
+				font-size: 1em;
+				width: 450px;
+				margin-left: 40px;
+			}
+
+
+			/* TABBED PANEL GRAPHIC */
+
+			#slideshow-wrapper {margin: 20px 0 10px 0; color: black;}
+			#slideshow-nav  {height: auto;float: left;z-index: 1000;}
+			#slideshow-nav li {
+			    border: 1px solid #999999;
+			    border-bottom: 1px solid white;
+			    border-radius: 10px 10px 0 0;
+			    padding: 10px 10px 5px 10px;
+			    display: block;
+			    float: left;
+			    zoom: 1;
+			    filter: alpha(opacity=50);
+			    opacity: 0.5;
+			    margin: 0 0 0 5px;
+			    width: 15%;
+			    font-family: arial, sans-serif;
+			    font-size: 12px;
+			    line-height: 14px;
+			    text-align: center;
+			    height: auto;
+			    vertical-align: top;
+			    background-color: none;
+					color: black;
+			}
+
+			#slideshow-nav li img {width: 100%;}
+			.nav-container {z-index: 2000;}
+			#slideshow-nav li.first {margin-left: 6px;}
+			#slideshow-nav li:hover {zoom: 1;filter: alpha(opacity=100);opacity: 1; background-color: white;}
+			#slideshow-nav li.activeSlide  {filter:alpha(opacity=100);opacity:1; background-color: white;font-weight: bold;border-bottom:2px solid white;z-index: 1000;}
+			#slidescontainer {position: relative;overflow: hidden;}
+			#slideshow {position: relative;width: 100% !important;}
+			.slide {width: 100% !important; position: absolute;text-align: left;padding: 10px 20px 0 20px; display: none;background-color: white;z-index: 1;}
+
+			.horiz-line1 {margin-top: -1px;border-top: 1px solid #999999;z-index:100;}
+			#prev-btn, #next-btn {display: inline;float: left;margin-top: 10px;padding: 0px 0px 0 10px;width: 31px;text-align: left;vertical-align: middle;z-index: 20;}
+			#next-btn {text-align: right;}
+			#arrowfull {zoom: 1;filter: alpha(opacity=100);opacity: 1;}
+			#arrowfaint {zoom: 1;filter: alpha(opacity=20);opacity: 0.4;}
+
+			/* TABBED PANEL WITH IMAGES */
+
+			#slideshow-wrapper2 {margin: 20px 0 10px 0; color: black;}
+			#slideshow-nav2  {height: auto;float: left;z-index: 1000;}
+			#slideshow-nav2 li {
+			    border: 1px solid #999999;
+			    border-bottom: 1px solid white;
+			    border-radius: 10px 10px 0 0;
+			    padding: 10px 10px 5px 10px;
+			    display: block;
+			    float: left;
+			    zoom: 1;
+			    filter: alpha(opacity=50);
+			    opacity: 0.5;
+			    margin: 0 0 0 5px;
+			    width: 15%;
+			    font-family: arial, sans-serif;
+			    font-size: 12px;
+			    line-height: 14px;
+			    text-align: center;
+			    height: auto;
+			    vertical-align: top;
+			    background-color: white;
+			    color: black;
+			}
+
+			#slideshow-nav2 li img {width: 100%; color: white; padding-top: 10px;}
+			.nav-container2 {z-index: 2000;}
+			#slideshow-nav2 li.first {margin-left: 6px;}
+			#slideshow-nav2 li:hover {zoom: 1;filter: alpha(opacity=100);opacity: 1; background-color: white;}
+			#slideshow-nav2 li.activeSlide  {filter:alpha(opacity=100);opacity:1; background-color: white;font-weight: bold;border-bottom:2px solid white ;z-index: 1000;}
+			#slidescontainer2 {position: relative; overflow: hidden;}
+			#slidewithimages { position: relative; width: 100% !important;}
+			.slidewithimage {position: absolute;text-align: left;padding: 0 20px; display: none;background-color: white;z-index: 1;}
+
+			.horiz-line1 {margin-top: -1px;border-top: 1px solid #999999;z-index:100;}
+			#prev-btn, #next-btn {display: inline;float: left;margin-top: 10px;padding: 0px 0px 0 10px;width: 31px;text-align: left;vertical-align: middle;z-index: 20;}
+			#next-btn {text-align: right;}
+			#arrowfull {zoom: 1;filter: alpha(opacity=100);opacity: 1;}
+			#arrowfaint {zoom: 1;filter: alpha(opacity=20);opacity: 0.4;}
+
+			/* NUMBERED DOTS */
+
+				.dots{
+				    position: relative;
+				}
+
+				.dot {
+				    background-color: #DF7527;
+				    color: white;
+				    text-align: center;
+				    vertical-align: middle;
+				    padding: 0;
+				    line-height: 20px;
+				    font-family: sans-serif;
+				    font-size: 14px;
+				    width: 20px !important;
+				    height: 20px !important;
+				    border-radius: 20px;
+				    border: 1px solid #ffffff;
+				    box-shadow: 1px 1px 1px #000000;
+				    cursor: pointer;
+				    z-index: 999;
+				}
+
+				.dots #parent {
+				  position: absolute;
+				  width: auto;
+				}
+
+				#parent a {
+					text-decoration: none;
+				}
+
+				#popup {
+					position: absolute;
+					background-origin: bottom left;
+					left: -75px;
+					bottom: 45px;
+
+				  border: solid 1px #666666;
+				  background-color: white;
+				  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+				  padding: 10px;
+				  font-family: 'Open Sans', sans-serif;
+				  font-size: 0.9em;
+				  line-height: 1.2em;
+				  width: 160px;
+				  color: black;
+				}
+
+				#parent #popup::after {
+				  content: "";
+				  position: absolute;
+				  top: 100%;
+				  left: 45%;
+				  margin-left: -5px;
+				  border-width: 10px;
+				  border-style: solid;
+				  border-color: black transparent transparent transparent;
+				}
+
+				#popup div {
+					width: 100%;
+					margin: auto;
+				}
+
+				#parent #popup {
+				  display: none;
+				  min-width: 250px;
+				}
+
+				#parent:hover #popup {
+				  display: block;
+				}
+
+				#parent:hover {
+				  z-index: 5000;
+				}
+
+				/* RESPONSIVE STYLE BREAKPOINT REFERENCE
+					big desktops: 1400px;
+					most laptops: 1100px;
+					iPad portrait: 768px;
+					phones: 480px;
+					smaller phones: 300px;*/
+
+				@media screen and (max-width: 1400px){
+					/*use these classes to switch out three levels of images with hard-to-read text*/
+					.hide-desktop {display:block;}
+					.hide-desktop {display:none;}
+					.hide-tablet {display:none;}
+				}
+
+				@media screen and  (max-width: 1100px){
+				}
+
+				@media screen and  (max-width: 768px){
+					.hide-desktop {display:none;}
+					.hide-tablet {display:block;}
+				}
+
+				@media screen and  (max-width: 480px){
+					.hide-desktop {display:none;}
+					.hide-tablet {display:none;}
+					.hide-mobile {display:block;}
+
+					/*making fonts a bit smaller*/
+					.graphic h4 {font-size:1.5em;}
+					.graphic p {font-size:0.9em; line-height: 1.4em;}
+					.graphic {width: 100%; max-width: 1200px;}
+					.centered {max-height: none;}
+				}
+
+				@media screen and  (max-width: 300px){
+					.graphic h4 {font-size:1.5em;}
+					.graphic p {font-size:0.9em; line-height: 1.4em;}
+					.graphic {width: 100%; max-width: 1200px;}
+					.centered {max-height: none;}
+				}
+		</style>
+
+</head>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- THE PAGE YOU SEE STARTS HERE!!!!!!!!!  -->
+		<!-- OPTIONS-YOU DON'T HAVE TO DO THESE:
+				1. If you want a fixed background image behind the whole graphic, add URL between parenthesis below.
+				2. If you would prefer a white template, change the background color to white, and the color to black (that's the color of the text) / -->
+
+<body id="site" class="base" style="background-image: url(); background-color: white; color: black;">
+
+
+
+<!-- BEGIN SINGLE LAYER - SIMPLE IMAGE WITH ROLLOVER -->
+
+			<div class="graphic">
+					<h1>Vietnamese Immigrants in the U.S.</h1>
+					<h3>By Han Vu</h3>
+					<p>From 290 people who obtained lawful permanent resident status in the 1950s, in 2021, there were about 1,338,538 Vietnamese immigrants in the U.S (data from Census Bureau 2021 American Community Survey, released September 15th, 2022). Vietnamese mostly immigrated to the U.S. in the 1970s and 1980s after the Fall of Saigon in 1975.</p>
+			</div><br>
+<!-- ////change regular to wide for a featured image///-->
+
+							<div class="graphic">
+								<img src="images/pop1.png" alt="Vietnamese population chart">
+									<figcaption>There are about nearly 1.4 million Vietnamese living in the U.S.</figcaption>
+							</div><!--  Important: background needs to be inside of div.-->
+
+
+
+
+
+<!-- END SINGLE LAYER - SIMPLE IMAGE WITH ROLLOVER -->
+
+<!-- BEGIN SINGLE LAYER - BEFORE/AFTER IMAGE -->
+
+			<div class="graphic">
+					<h4>Over 50% of Vietnamese immigrants live in California and Texas</h4>
+					<p>Vietnamese is one of the largest foreign-born groups in the United States, ranked 4th among Asian immigrant groups, after India, China (including Hong Kong), and the Philippines. </p>
+					<p>In 2021, over 51 percent of all Vietnamese immigrants lived in California or Texas. Since 2010, the top ten states with the most Vietnamese immigrants remain almost the same: California, Texas, Florida, Washington, Georgia, Virginia, Massachusett, Pennsylvania, New York, and North Carolina. 	
+					</p>
+			</div>
+
+			<div class="graphic move">
+					<iframe title="Vietnamese immigrants distribution in 2020" aria-label="Interactive area chart" id="datawrapper-chart-VaFpf" width="100%" height="360" src="https://datawrapper.dwcdn.net/ThPpH/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+</script>
+
+			</div>
+
+
+<!-- END SINGLE LAYER - BEFORE/AFTER IMAGE -->
+
+<!-- BEGIN SINGLE LAYER - TIMELINE EXAMPLE -->
+
+				<div class="graphic">
+					<h4>Los Angeles and San Jose are still "the capital" of Vietnamese in the U.S.</h4>
+					<p class="body">In terms of core-based statistical area (CBSA), in 2010, Los Angeles-Long Beach-Santa Ana (CA Metro Area), San Jose-Sunnyvale-Santa Clara (CA Metro Area), Houston-Sugar Land-Baytown (TX Metro Area), San Francisco-Oakland-Fremont (CA Metro Area), Dallas-Fort Worth-Arlington (TX Metro Area) were the most Vietnamese population density in the U.S. <br>
+					However, in 2021, Seatle-Tacoma-Bellevue (WA Metro Area) replaced San Francisco-Oakland-Fremont in the top 5. Those 5 places acquired over 41% of all Vietnamese in the U.S.</p>
+					<!-- NOTE: YOU NEED TO ADD HTTP: TO THE FRONT OF THE // IN THE URL OF THE IFRAME -->
+					<div>
+						<iframe title="Cities with the most Vietnamese immigrants" aria-label="Interactive area chart" id="datawrapper-chart-ZxP0X" src="https://datawrapper.dwcdn.net/fW6FX/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="388"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+					</div><br>
+				
+					<div>
+						<h4>Age, Education, and Employment
+						</h4><br>
+						<p>
+							The median age for Vietnamese immigrants was 51.9 years old in 2021, a little older than the median age for all immigrants which was 46.6 years old, and 38.8 for the U.S. in total. The high median age is due to the fact that the vast majority of Vietnamese came into the U.S in the 70s and 80s.
+							60% of Vietnamese entered the U.S before 2000, and just 22% of them entered in 2010 or later.
+						</p><br>
+						<iframe title="Median Age" aria-label="Interactive area chart" id="datawrapper-chart-VaFpf" width="100%" height="360" src="https://datawrapper.dwcdn.net/ukbg0/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+						</script><br>
+						<p>In education, nearly 71% of Vietnamese immigrants ages 25 and older hold high school diplomas or higher, and about 30% hold bachelor's degrees or higher.</p><br>
+
+						<iframe title="Education" aria-label="Interactive area chart" id="datawrapper-chart-VaFpf" width="100%" height="360" src="https://datawrapper.dwcdn.net/j1gdP/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+						</script><br>
+						<p>Vietnamese are generally hard workers. The unemployment rate among Vietnamese 16 years or older is relatively low, at 6.1% in 2021, a little bit lower than in the U.S. population in general (6.3%). They mostly worked in manufacturing, educational services, healthcare, social assistance, and other services.
+						</p><br>
+						<iframe title="Employment" aria-label="Interactive area chart" id="datawrapper-chart-VaFpf" width="100%" height="360" src="https://datawrapper.dwcdn.net/uYzp4/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+						</script><br>
+					</div>
+				</div>
+
+<!-- END SINGLE LAYER - TIMELINE EXAMPLE -->
+
+<!-- BEGIN SINGLE LAYER - DATAWRAPPER EXAMPLE -->
+
+				<div class="graphic">
+						<h4>Income and Poverty</h4>
+						<p>The median household income of Vietnamese immigrants in 2021 was $74,588, higher than the median for immigrants in total and all the U.S. population in total, which were $69,622 and $69,717 respectively. Vietnamese income per capita was also higher than the U.S. population in total ($40,127 vs $38.332).
+						</p>
+				</div>
+
+				<div class="graphic move">
+						<div>
+								<!-- Sub out the embded code below for your embed code -->
+									<iframe title="Median household income" aria-label="Interactive line chart" id="datawrapper-chart-fKXHX" src="https://datawrapper.dwcdn.net/HQsU3/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+								<!-- Sub out the embed code above for your embed code -->
+						</div> <br>
+						<div>
+							<p>About 10.9% of Vietnamese families lived in poverty, compared to 12.5% of all immigrants.</p>
+							<iframe title="poverty rate" aria-label="Grouped Column Chart" id="datawrapper-chart-HhXB2" src="https://datawrapper.dwcdn.net/iNXFO/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+						</div><br>
+						<div>
+							<p>Vietnamese people generally tend to own a house more than other foreign-born immigrants, with 72.7% compared to 55.6%.
+							</p>
+							<iframe title="Housing" aria-label="Interactive line chart" id="datawrapper-chart-4sQyz" src="https://datawrapper.dwcdn.net/RBpi5/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+						</div>
+
+				</div>
+
+<!-- END SINGLE LAYER - DATAWRAPPER EXAMPLE -->
+
+<!-- BEGIN SINGLE LAYER - TABLEAU EXAMPLE -->
+
+				<div class="graphic">
+						<p>The house’s median value was also higher, at $416.100 compared to $281.400 in the U.S. population in general. </p>
+				</div>
+
+				<div class="graphic move">
+						<div style="max-height:550px;">
+
+							<!-- REPLACE THE CODE BELOW WITH THE EMBED CODE -->
+							<iframe title="Median house value" aria-label="Interactive line chart" id="datawrapper-chart-Nl76D" src="https://datawrapper.dwcdn.net/SYrJt/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+</script>
+							<!-- REPLACE THE CODE ABOVE WITH THE EMBED CODE -->
+
+						</div><br>
+						<div>
+							<p>In 2021, only 6.7% of Vietnamese immigrants didn’t have health insurance, nearly 6 times lower than Mexican immigrants. Over 62% of them had private health insurance, and nearly 39% of them had public coverage.
+							</p>
+							<p><italic>*Note: The sum of shares by type of insurance is likely to be greater than 100 because people may have more than one type of insurance.</italic></p>
+							<iframe title="Health Insurance" aria-label="Interactive area chart" id="datawrapper-chart-NfZed" src="https://datawrapper.dwcdn.net/lMOIV/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+						</div> <br>
+						<div>
+							<h4>Immigration Pathways and Naturalization</h4>
+							<p>Immigrants from Vietnam are significantly more likely than the overall foreign-born population to be naturalized U.S. citizens or to obtain permanent resident status.<br> 
+							According to Homeland Security data, in 2020, Vietnam ranked 56th among the countries with the most nonimmigrant admissions to the U.S but ranked 5th among the countries with the most people obtaining lawful permanent resident status with 29,334 people.
+								</p>
+							<p>As of 2019, 76 percent of Vietnamese immigrants were U.S. citizens, compared to 52 percent of the total foreign-born population, according to the Migration Policy Institute. 
+							</p>
+
+							<iframe title="Green card" aria-label="Interactive line chart" id="datawrapper-chart-AbCrX" src="https://datawrapper.dwcdn.net/Iv1JG/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+</script>
+						</div>
+				</div>
+
+<!-- END SINGLE LAYER - TABLEAU EXAMPLE -->
+
+
+<!-- BEGIN SINGLE LAYER - - 1-2-3 SEQUENCE -->
+
+			<div class="graphic">
+				
+					<p>According to the data from Homeland Security Yearbook 2020, in the 1950 - 1960 period, there were only 290 Vietnamese obtaining lawful permanent resident status in the U.S., and the number was still low the next decade but rose by over 4000% in the 70s, due to the Fall of Saigon in 1975. Since then, the number has kept growing, but in a much smaller percentage: 65% in the 80s, 37% in the 90s, 5% in the 2000s and rose again by 23.4% in the 2010s. 
+					</p>
+			</div>
+
+			<div class="graphic move">
+
+				<iframe title="Green card over the years" aria-label="Interactive line chart" id="datawrapper-chart-3JLbn" src="https://datawrapper.dwcdn.net/dtw3d/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+			</div>
+
+<!-- END SINGLE LAYER - 1-2-3 SEQUENCE -->
+
+<!-- BEGIN SINGLE LAYER - VIDEO WRAPPER -->
+
+			<div class="graphic">
+				
+					<p>The Migration Policy Institute (MPI) estimates that 58,000 unauthorized immigrants from Vietnam resided in the United States as of 2018, accounting for about 1 percent of all 11 million unauthorized immigrants in the country. 
+					</p>
+			</div>
+
+			<div class="graphic move">
+				<div class="graphicwide">
+					<img src="images/bill.jpeg" alt="Bill Clinton visits Vietnam">
+						<figcaption>Bill Clinton greeted by Vietnamese people on his historic visit to Vietnam in 2000 (<i>Photo</i>: Viet Dung)</figcaption>
+				</div>
+					<!-- Change image name below, or replace the entire line with embed code. -->
+					<!--iframe width="560" height="315" src="https://www.youtube.com/embed/iNuJdXu0ZZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></!--iframe>
+					<figcaption>Introduction to Columbia (<i>Credit</i>: The City of Columbia)</figcaption>
+			</!--div><br><br>
+			<div class="graphic">
+			<p>Diversity is not the City's strong point since over 70% population is white. Equality is still something the City has to work on while the big gap of household median income still exists.
+			However, the City is still a peaceful place that could be home to anyone trying to work hard.</p>
+		</div><br>
+			<div class="graphicwide">
+				<img src="images/BoochesBar_1970.jpeg" alt="Booches' Bar in 1970; Credit: Mizzou Magazine">
+					<figcaption>Booches' Bar in 1970 (<i>Photo</i>: Columbia Missourian)</figcaption>
+			</div>
+			
+
+
+<!-- END SINGLE LAYER - VIDEO WRAPPER -->
+
+
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- END OF GRAPHIC TEMPLATE ELEMENTS  -->
+<!-- DO NOT MODIFY OR DELETE ANYTHING BELOW HERE. -->
+
+				<script>
+					$(document).on("scroll", function() {
+					  var pageTop = $(document).scrollTop();
+					  var pageBottom = pageTop + $(window).height();
+					  var moves = $(".move");
+
+					  for (var i = 0; i < moves.length; i++) {
+					    var move = moves[i];
+
+						if ($(move).position().top < pageBottom) {
+						      $(move).addClass("visible");
+						    } else {
+						      $(move).removeClass("visible");
+						    }
+						}
+
+					});
+				</script>
+
+
+	</body>
+</html>
